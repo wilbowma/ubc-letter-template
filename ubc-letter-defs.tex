@@ -1,0 +1,43 @@
+\usepackage{url}
+\usepackage{geometry}
+\geometry{headheight=0pt}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+
+\usepackage{charter}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{srcltx}
+\usepackage{graphicx}
+
+\pagenumbering{gobble}
+%\usepackage{classico}
+
+\newdimen\zzfontsz
+\newcommand{\fontsz}[2]{\zzfontsz=#1%
+{\fontsize{\zzfontsz}{1.2\zzfontsz}\selectfont{#2}}}
+
+\newcommand{\texfontsz}[1]{\zzfontsz=#1%
+\fontsize{\zzfontsz}{1.25\zzfontsz}\selectfont}
+\newcommand{\mathsz}[2]{\text{\fontsz{#1}{$#2$}}}
+
+\newcommand{\runonfontsz}[1]{\zzfontsz=#1%
+\fontsize{\zzfontsz}{1.2\zzfontsz}\selectfont}
+
+
+\newcommand{\printlogo}{%\hspace*{-20pt}%%
+  \protect\includegraphics[width=210pt]{ubclogo.eps}}
+
+\makeatletter
+\def\url@vttstyle{%
+  \@ifundefined{selectfont}{%
+    \def\UrlFont{\tt}%
+  }{%
+    \def\UrlFont{\normalfont\fontfamily{cmvtt}\selectfont}%
+  }%
+}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{vtt}
+
+\newcommand{\myopening}{To Whom It May Concern:}
+\newcommand{\myclosing}{Sincerely,}

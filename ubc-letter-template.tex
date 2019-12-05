@@ -1,0 +1,53 @@
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{empty}{\fancyhf{}\fancyhead[L]{%
+   \printlogo%
+   \\[24pt]
+   \runonfontsz{10pt}%
+   \textbf{\mytitle\myname} \\[1pt]
+   Department of Computer Science \\
+   University of British Columbia \\[2pt]
+   \mymail \\[2pt]
+ %   {\!}{+}1~604--822--3061 \\[2pt]
+   \myhomepage
+}}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{}}
+
+% Correct head height that somehow gets broken by fancyhdr
+\afterpage{\global\setlength{\headheight}{0pt}
+%  \global\setlength{\topmargin}{-3cm}
+  \global\addtolength{\textheight}{80pt}
+}
+%\addtolength{\textheight}{80pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+
+\input{address.tex}
+
+%\vspace{-5.5cm}
+\begin{document}
+
+\signature{
+\vspace*{-35pt}
+\hspace{3pt}\protect\includegraphics{signature.pdf}
+\\
+\myname\\[0.5ex]
+}
+
+\begin{letter}{
+\textbf{Subject:} Letter of Recommendation for \textbf{\studentname}
+}
+
+\opening{\myopening}
+
+\body
+
+\closing{~\\[2ex]
+  \myclosing
+}
+
+\vfill
+\end{letter}
+
+
+\end{document}
